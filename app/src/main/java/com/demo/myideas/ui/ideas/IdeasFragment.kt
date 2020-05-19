@@ -77,13 +77,17 @@ class IdeasFragment : DaggerFragment() {
         setupToolbar()
         with(viewModel) {
             ideasList.observe(this@IdeasFragment.viewLifecycleOwner, Observer {
-                if (ideasList.value?.size ?: -1 > 0) {
                     adapter?.removeLoading()
                     loading = false
-                    fragmentIdeasBinding!!.ideaDetailsRecyclerview.visibility = View.VISIBLE
+                    if (ideasList.value?.size ?: -1 > 0) {
+                        fragmentIdeasBinding!!.ideaDetailsRecyclerview.visibility = View.VISIBLE
+                    }
+                    else{
+                        fragmentIdeasBinding!!.ideaDetailsRecyclerview.visibility = View.GONE
+                    }
                     adapter?.removeLoading()
                     adapter?.notifyDataSetChanged()
-                }
+
             })
             error.observe(this@IdeasFragment.viewLifecycleOwner, Observer {
                 Toast.makeText(context, it.getErrorMessage(resources), Toast.LENGTH_LONG).show()

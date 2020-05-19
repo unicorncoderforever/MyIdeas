@@ -81,8 +81,7 @@ class AddIdeasFragment : DaggerFragment(), AdapterView.OnItemSelectedListener {
     private fun setUpSpinner(spinner: Spinner) {
         val adapter = ArrayAdapter.createFromResource(
             requireContext(), R.array.rate_array
-            , android.R.layout.simple_spinner_item
-        )
+            , android.R.layout.simple_spinner_item)
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         spinner.adapter = adapter
         spinner.onItemSelectedListener = this
@@ -114,32 +113,39 @@ class AddIdeasFragment : DaggerFragment(), AdapterView.OnItemSelectedListener {
 
 
     fun logoutUser() {
-        viewModel.logoutUser({
-            findNavController().navigate(R.id.action_ideasFragment_to_splashFragment)
-        }, {
-            Utility.showToast(requireContext(), it.getErrorMessage(resources))
-        }
+            viewModel.logoutUser({
+                findNavController().navigate(R.id.action_ideasFragment_to_splashFragment)
+            }, {
+                Utility.showToast(requireContext(), it.getErrorMessage(resources))
+            }
         )
 
     }
 
     private fun inserOrUpdate() {
+        fragmentIdeasBinding!!.progressLayout.visibility = View.VISIBLE
         ideaCalculator?.setContent(fragmentIdeasBinding!!.content.text.toString())
         Log.e(TAG, "id " + ideaCalculator?.idea?.id)
-        if (!ideaCalculator?.isUpdate!!)
+        if (!ideaCalculator?.isUpdate!!) {
             viewModel.insertIdea(ideaCalculator?.idea, {
+                fragmentIdeasBinding!!.progressLayout.visibility = View.GONE
                 if (isAdded) {
                     requireActivity().onBackPressed()
                 }
             }, {
+                fragmentIdeasBinding!!.progressLayout.visibility = View.GONE
                 Utility.showToast(requireContext(), it.getErrorMessage(resources))
-            }) else {
+            })
+            }   else {
             viewModel.updateIdea(ideaCalculator?.idea, {
+                fragmentIdeasBinding!!.progressLayout.visibility = View.GONE
                 if (isAdded) {
                     requireActivity().onBackPressed()
                 }
             }, {
                 Utility.showToast(requireContext(), it.getErrorMessage(resources))
+                fragmentIdeasBinding!!.progressLayout.visibility = View.GONE
+
             })
 
         }

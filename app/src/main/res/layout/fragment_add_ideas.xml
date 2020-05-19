@@ -194,5 +194,23 @@
             android:layout_marginEnd="@dimen/margin_common"
             android:layout_marginTop="@dimen/margin_button_top_cancel"
             android:background="#CECECE"/>
+        <FrameLayout
+            android:id="@+id/progress_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:clickable="true"
+            android:elevation="5dp"
+            app:layout_constraintRight_toRightOf="parent"
+            android:visibility="gone"
+
+            >
+            <ProgressBar
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"/>
+        </FrameLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
