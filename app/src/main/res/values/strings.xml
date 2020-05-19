@@ -1,0 +1,86 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">The Idea Pool</string>
+    <string name="action_logut">Log out</string>
+    <string name="name">Name</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+
+    <string name="next">Next</string>
+    <string name="sing_up">Sign Up</string>
+    <string name="previous">Previous</string>
+    <string name="idea_empty">Got Ideas?</string>
+
+    <string name="text_empty">Enter Details Feild</string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+
+    <string name="login_text">Already have an account? Log in</string>
+    <string name="sign_text_in_login">Don’t have an account? Create an account</string>
+    <string name="title_activity_login">Sign in</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="login">Log In</string>
+    <string name="impact">Impact</string>
+    <string name="ease">Ease</string>
+    <string name="confidence">Confidence</string>
+    <string name="avg">Avg.</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="ten">10</string>
+    <string name="nine">9</string>
+    <string name="eight">8</string>
+    <string name="seven">7</string>
+    <string name="six">6</string>
+    <string name="five">5</string>
+    <string name="four">4</string>
+    <string name="three">3</string>
+    <string name="two">2</string>
+    <string name="one">1</string>
+    <string name="content_error">Please Enter The Content</string>
+
+    <string-array name="rate_array">
+        <item>&#160;10&#160;</item>
+        <item>&#160;9&#160;</item>
+        <item>&#160;8&#160;</item>
+        <item>&#160;7&#160;</item>
+        <item>&#160;6&#160;</item>
+        <item>&#160;5&#160;</item>
+        <item>&#160;4&#160;</item>
+        <item>&#160;3&#160;</item>
+        <item>&#160;2&#160;</item>
+        <item>&#160;1&#160;</item>
+    </string-array>
+
+    <string name="not_modified_error">content not modified</string>
+    <string name="bad_request_error">Bad request</string>
+    <string name="unauthorized_error">unauthorized access</string>
+    <string name="forbidden_error">Forbidden error</string>
+    <string name="not_found_error">page not found error</string>
+
+
+
+    <string name="method_not_allowed_error">method not allowed error</string>
+    <string name="conflict_error">Conflict error</string>
+    <string name="unprocessable_error">unprocessable entity error</string>
+    <string name="server_error_error">server error</string>
+
+    <string name="unknown_error">unknown error</string>
+    <string name="network_error">Network error</string>
+    <string name="invalid_input">Validation failed: Email is invalid, Password at least 8 characters, including 1 uppercase letter, 1 lowercase letter, and 1 number</string>
+    <string name="delete_dialogue">This idea will be permanently Deleted</string>
+
+    <string name="title_diaogue">Are you sure</string>
+
+    <string name="ok">Ok</string>
+</resources>

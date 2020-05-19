@@ -1,0 +1,20 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="margin_toolbat_title_start">36dp</dimen>
+    <dimen name="margin_common">55dp</dimen>
+    <dimen name="margin_add_idea_side">30dp</dimen>
+    <dimen name="margin_add_idea_top">30dp</dimen>
+    <dimen name="margin_top">26dp</dimen>
+    <dimen name="margin_button_top">35dp</dimen>
+    <dimen name="margin_button_top_save">38dp</dimen>
+    <dimen name="margin_button_top_cancel">15dp</dimen>
+    <dimen name="margin_text_bottom">56dp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="fab_add_margin_end">29dp</dimen>
+    <dimen name="fab_add_margin_bottom">33dp</dimen>
+    <dimen name="view_margin_line">12dp</dimen>
+    <dimen name="view_margin_line_height">1dp</dimen>
+    <dimen name="idea_type_size">19sp</dimen>
+</resources>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/SignUpFragment"
+        android:name="com.demo.myideas.ui.login.SignUpFragment"
+
+        tools:layout="@layout/sign_up_fragment">
+        <action
+            android:id="@+id/action_FirstFragment_to_SecondFragment"
+            app:destination="@id/LoginFragment" />
+        <action
+            android:id="@+id/action_SignUpFragment_to_ideasFragment"
+            app:destination="@id/ideasFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/LoginFragment"
+        android:name="com.demo.myideas.ui.login.LoginFragment"
+
+        tools:layout="@layout/login_fragment">
+
+        <action
+            android:id="@+id/action_SecondFragment_to_FirstFragment"
+            app:destination="@id/SignUpFragment" />
+        <action
+            android:id="@+id/action_LoginFragment_to_ideasFragment"
+            app:destination="@id/ideasFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ideasFragment"
+        android:name="com.demo.myideas.ui.ideas.IdeasFragment"
+        android:label="fragment_ideas"
+        tools:layout="@layout/fragment_ideas" >
+        <action
+            android:id="@+id/action_ideasFragment_to_addIdeasFragment"
+            app:destination="@id/addIdeasFragment" />
+        <action
+            android:id="@+id/action_ideasFragment_to_splashFragment"
+            app:destination="@id/splashFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addIdeasFragment"
+        android:name="com.demo.myideas.ui.ideas.AddIdeasFragment"
+        android:label="fragment_add_ideas"
+        tools:layout="@layout/fragment_add_ideas" >
+        <action
+            android:id="@+id/action_addIdeasFragment_to_ideasFragment"
+            app:destination="@id/ideasFragment" />
+        <action
+            android:id="@+id/action_ideasFragment_to_splashFragment"
+            app:destination="@id/splashFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.demo.myideas.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" >
+        <action
+            android:id="@+id/action_splashFragment_to_SignUpFragment"
+            app:destination="@id/SignUpFragment" />
+        <action
+            android:id="@+id/action_splashFragment_to_ideasFragment"
+            app:destination="@id/ideasFragment" />
+    </fragment>
+</navigation>
