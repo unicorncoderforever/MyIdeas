@@ -41,7 +41,10 @@ class LoginFragment : DaggerFragment() {
     ): View? {
         loginFragmentBinding =  DataBindingUtil.inflate(
             inflater, R.layout.login_fragment, container, false)
-
+        (activity as MainActivity?)!!.supportActionBar!!.title = resources.getString(
+            R.string.app_name
+        )
+        (activity as MainActivity?)!!.supportActionBar!!.setDisplayHomeAsUpEnabled(false)
         with(viewModel) {
             mUserInfo.observe(this@LoginFragment.viewLifecycleOwner, Observer {
                 navigateToIdeaFragment()

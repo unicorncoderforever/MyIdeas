@@ -108,8 +108,6 @@ class AddIdeasFragment : DaggerFragment(), AdapterView.OnItemSelectedListener {
         this.fragmentIdeasBinding!!.cancel.setOnClickListener {
             if (isAdded) {
                 requireActivity().onBackPressed()
-            } else {
-                findNavController().navigate(R.id.action_addIdeasFragment_to_ideasFragment)
             }
         }
     }
@@ -132,8 +130,6 @@ class AddIdeasFragment : DaggerFragment(), AdapterView.OnItemSelectedListener {
             viewModel.insertIdea(ideaCalculator?.idea, {
                 if (isAdded) {
                     requireActivity().onBackPressed()
-                } else {
-                    findNavController().navigate(R.id.action_addIdeasFragment_to_ideasFragment)
                 }
             }, {
                 Utility.showToast(requireContext(), it.getErrorMessage(resources))
@@ -141,8 +137,6 @@ class AddIdeasFragment : DaggerFragment(), AdapterView.OnItemSelectedListener {
             viewModel.updateIdea(ideaCalculator?.idea, {
                 if (isAdded) {
                     requireActivity().onBackPressed()
-                } else {
-                    findNavController().navigate(R.id.action_addIdeasFragment_to_ideasFragment)
                 }
             }, {
                 Utility.showToast(requireContext(), it.getErrorMessage(resources))

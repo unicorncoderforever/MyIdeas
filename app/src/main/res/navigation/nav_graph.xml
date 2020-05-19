@@ -48,9 +48,6 @@
         android:label="fragment_add_ideas"
         tools:layout="@layout/fragment_add_ideas" >
         <action
-            android:id="@+id/action_addIdeasFragment_to_ideasFragment"
-            app:destination="@id/ideasFragment" />
-        <action
             android:id="@+id/action_ideasFragment_to_splashFragment"
             app:destination="@id/splashFragment" />
     </fragment>

@@ -42,6 +42,10 @@ class SignUpFragment : DaggerFragment() {
             inflater,
             R.layout.sign_up_fragment, container, false)
         addSpannableText()
+        (activity as MainActivity?)!!.supportActionBar!!.title = resources.getString(
+            R.string.app_name
+        )
+        (activity as MainActivity?)!!.supportActionBar!!.setDisplayHomeAsUpEnabled(false)
         return signUpFragmentBinding?.root;
     }
 
